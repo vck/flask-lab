@@ -9,6 +9,11 @@ app = Flask(__name__)
 r = redis.Redis()
 q = Queue(connection=r)
 
+@app.route('/')
+def index_page():
+    return "hello world! visit <a href='/task?n=1'>task</a>"
+
+
 @app.route('/task')
 def add_task():
     if request.args.get("n"):

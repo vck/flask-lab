@@ -1,6 +1,7 @@
+import time
 
 def background_task(n):
-    delay = 2
+    delay = 10
     print("Task running")
     time.sleep(delay)
     print(len(n))
